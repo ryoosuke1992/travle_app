@@ -1,0 +1,43 @@
+// Place all the styles related to the travels controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the travel controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+	margin:0;
+	padding:0;
+}
+
+.site-title h1{
+	margin:0;
+	float:left;
+}
+
+.global-menu{
+	float:right;
+}
+
+.sub-title p{
+	color:white;
+	font-size:30px;
+}
+
+.top-page{
+	background-image: url("/images/uyuni.png");
+	background-size:cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+.new-travels{
+	padding:70px 0
+}
+
+
+.menu-titile h2{
+	font-size:30px;
+}
