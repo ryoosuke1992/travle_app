@@ -1,5 +1,17 @@
-ここにフォームの内容を追記
+<h1>新規旅行の企画</h1>
 
-詳しくはudemyの動画を参照する
-
-追加する
+<%= form_for(@plan) do |f| %>
+  <%= f.label :企画名 %><br>
+  <%= f.text_field :title %><br>
+  <%= f.label :開催日 %><br>
+  <%= f.text_field :date %><br>
+  <%= f.label :開催場所 %><br>
+  <%= f.text_field :place %><br>
+  <%= f.label :集合場所 %><br>
+  <%= f.text_field :meeting_place %><br>
+  <%= f.label :集合時間 %><br>
+  <%= f.text_field :meeting_time %><br>
+  <%= f.label :企画内容 %><br>
+  <%= f.text_area  :content %><br>
+  <%= f.submit %>
+<% end %>
