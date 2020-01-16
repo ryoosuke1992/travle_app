@@ -6,82 +6,72 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body{
-	margin:0;
-	padding:0;
+  margin:0;
+  padding:0;
 }
 
 img { 
-    max-width: 100%; 
-    height:auto;
+  max-width: 100%; 
+  height:auto;
 }
 
 .site-title h1{
-	margin:0;
-	float:left;
+  margin:0;
+  float:left;
 }
 
 .global-menu{
-	float:right;
+  float:right;
 }
 
 .sub-title p{
-	color:white;
-	font-size:30px;
+  color:white;
+  font-size:30px;
 }
 
 
 .top-page{
-		background-image: url("/images/top.png");
-		max-width:100%;
-		background-size:cover;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 680px;
-		position:relative;
+  background-image: url("/images/top.png");
+  max-width:100%;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 680px;
+  position:relative;
 }
 
 .sign-button{
-	position:absolute;
-	left:40%;
-	top:80%;
+  position:absolute;
+  left:40%;
+  top:80%;
 }
 
 @media (max-width: 770px){
-	.top-page {
-	  height:432px;
-	}
-
-	.sign-button{
-		left:35%; 
-		
-	}
-
-
+  .top-page {
+    height:432px;
 }
 
+  .sign-button{
+    left:35%; 
+}
+}
 
 @media (max-width: 640px){
-	.top-page {
-	  height:215px;
-	}
-
-	.sign-button{
-		display:flex;
-		left:14%; 
-		top:72%;
-		
+  .top-page {
+    height:215px;
+}
+  .sign-button{
+	display:flex;
+	left:14%; 
+	top:72%;	
 	}
 }
  
-
-
-
 .new-travels{
-	padding:70px 0
+  padding:70px 0
 }
 
-
 .menu-titile h2{
-	font-size:30px;
+  font-size:30px;
 }
 
