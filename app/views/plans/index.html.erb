@@ -1,30 +1,27 @@
 <div class=top-page>
-	<div class="site-title text-center">
-		<h1>トモタビ</h1>
-	</div>
 
-	<div class="global-menu">
-    	<ul>
-      		<li>新規登録</li>
-      		<li>ログイン</li>
-    	</ul>
-	</div>
-	<div class="sub-title text-center">
-		<p>さぁ、みんなで世界を旅しよう！</p>
-	</div>
+  <div class="sign-button">
+	<button type="button" class="btn btn-primary btn-lg mr-3"><i class="fa fa-user-plus" aria-hidden="true"></i>新規登録</button>
+	<button type="button" class="btn btn-danger btn-lg"><i class="fa fa-sign-in" aria-hidden="true"></i>ログイン</button>
+  </div>
+
 
 </div>
 
 <div class="new-travels container">
 	<div class="menu-titile text-center">
-		<h2>新着旅行企画</h2>
-		<% @plans .each do |plan| %>
-		<h2><%= plan.title %></h2>
-		<p><%= plan.content %></p>
-		<% end %>
-
-		
+		<h2>新着旅行企画</h2>		
 	</div>
+
+	<div class="row">
+	  <% @plans .each do |plan| %>
+	    <div class="col-md-4">
+	      <h2><%= plan.title %></h2>
+		  <p><%= plan.content %></p>
+	    </div>
+	  <% end %>
+	</div>
+		
 
 	
 	
