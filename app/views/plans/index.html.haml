@@ -1,16 +1,9 @@
 .top-page
   .sign
-    .sign__button
-      %button.btn.btn-primary.btn-lg.mr-3{:type => "button"}
-        %i.fa.fa-user-plus{"aria-hidden" => "true"}>
-        新規登録
-      %button.btn.btn-danger.btn-lg{:type => "button"}
-        %i.fa.fa-sign-in{"aria-hidden" => "true"}>
-        ログイン
     - if user_signed_in?
       / ユーザーがログインしているか調べる
       / ユーザーがログインしていた時の処理
-      .sign-button
+      .sign__button
         %button.btn.btn-primary.btn-lg.mr-3{:type => "button"}
           %i.fa.fa-user-plus{"aria-hidden" => "true"}>
           旅行企画
