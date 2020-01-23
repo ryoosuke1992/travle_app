@@ -14,11 +14,15 @@
   color:white;
 }
 
-.field{
-  margin-top:30px;
+.enlist{
+  &__field{
+    margin-top:30px;
+  }
+
+  &__actions{
+    margin-top:50px;
+    color:white;
+  }
 }
 
-.actions{
-  margin-top:50px;
-  color:white;
-}
+

@@ -1,0 +1,28 @@
+.sign_up
+  .container
+    .text-center.pt-5
+      %h2 新規登録
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .enlist
+          .enlist__field
+            = f.label :お名前
+            %br/
+            = f.text_field :name, autofocus: true
+          .enlist__field
+            = f.label :メールアドレス
+            %br/
+            = f.email_field :email, autofocus: true, autocomplete: "email"
+          .enlist__field
+            = f.label :パスワード
+            - if @minimum_password_length
+              %em
+                (#{@minimum_password_length}文字以上)
+            %br/
+            = f.password_field :password, autocomplete: "new-password"
+          .enlist__field
+            = f.label :パスワード確認
+            %br/
+            = f.password_field :password_confirmation, autocomplete: "new-password"
+          .enlist__actions
+            = f.submit "新規登録",class: 'sign-btn btn btn-warning'
