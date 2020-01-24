@@ -6,7 +6,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.top-page{
+.top{
   background-image: url("/images/top.png");
   max-width:100%;
   background-size:cover;
@@ -14,50 +14,47 @@
   background-size: cover;
   height: 680px;
   position:relative;
-}
 
-.sign{
-  
-  &__button{
+
+  &__sign{
+    &__button{
     position:absolute;
     left:40%;
     top:80%;
     color:white;
-  }
-
-  &__button a{
-    color:white;
+    
+      a{
+        color:white;
+      }
+    }
   }
 }
 
 
 @media (max-width: 770px){
 
-  .top-page {
+  .top {
     height:432px;
-  }
-
-  .sign{
-
-    &__button{
-      left:35%;
+    
+    &__sign{
+      &__button{
+        left:35%;
+      }
     }
   }
-
 }
 
 @media (max-width: 640px){
-  .top-page {
+  
+  .top {
     height:215px;
-  }
-
-  .sign{
     
-    &__button{
-      display:flex;
-      left:14%; 
-      top:72%;	
+    &__sign{
+      &__button{
+        display:flex;
+        left:14%; 
+        top:72%;	
+      }
     }
   }
-
 }
