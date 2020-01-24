@@ -14,5 +14,22 @@
  *= require_self
  */
 
- @import "font-awesome";
- @import "bootstrap";
+@import "font-awesome";
+@import "bootstrap";
+
+
+ul li{
+  list-style: none;
+}
+
+.notice {
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+
+.alert {
+  background-color: red;
+  color: white;
+  text-align: center;
+}
