@@ -1,0 +1,21 @@
+.top-page
+  .sign
+    - if user_signed_in?
+      / ユーザーがログインしているか調べる
+      / ユーザーがログインしていた時の処理
+      .sign__button
+        %button.btn.btn-primary.btn-lg.mr-3{type:"button"}
+          %i.fa.fa-user-plus{"aria-hidden":"true"}>
+          旅行企画
+        %button.btn.btn-danger.btn-lg{type:"button"}
+          %i.fa.fa-sign-in{"aria-hidden":"true"}
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+    - else
+      / ユーザーがログインしていなかった時の処理
+      .sign__button
+        %button.btn.btn-primary.btn-lg.mr-3{type:"button"}
+          %i.fa.fa-user-plus{"aria-hidden":"true"}
+          = link_to "新規登録", new_user_registration_path, class: 'post'
+        %button.btn.btn-danger.btn-lg{type:"button"}
+          %i.fa.fa-sign-in{"aria-hidden":"true"}>
+          ログイン
