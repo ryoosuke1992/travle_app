@@ -5,32 +5,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
-  margin:0;
-  padding:0;
-}
 
-img { 
-  max-width: 100%; 
-  height:auto;
-}
-
-.site-title h1{
-  margin:0;
-  float:left;
-}
-
-.global-menu{
-  float:right;
-}
-
-.sub-title p{
-  color:white;
-  font-size:30px;
-}
-
-
-.top-page{
+.top{
   background-image: url("/images/top.png");
   max-width:100%;
   background-size:cover;
@@ -38,45 +14,47 @@ img {
   background-size: cover;
   height: 680px;
   position:relative;
+
+
+  &__sign{
+    &__button{
+    position:absolute;
+    left:40%;
+    top:80%;
+    color:white;
+    
+      a{
+        color:white;
+      }
+    }
+  }
 }
 
-.sign-button{
-  position:absolute;
-  left:40%;
-  top:80%;
-}
-
-.sign-button a{
-  color:white;
-}
 
 @media (max-width: 770px){
 
-  .top-page {
+  .top {
     height:432px;
-  }
-
-  .sign-button{
-    left:35%;
+    
+    &__sign{
+      &__button{
+        left:35%;
+      }
+    }
   }
 }
 
 @media (max-width: 640px){
-  .top-page {
+  
+  .top {
     height:215px;
+    
+    &__sign{
+      &__button{
+        display:flex;
+        left:14%; 
+        top:72%;	
+      }
+    }
   }
-  .sign-button{
-    display:flex;
-    left:14%; 
-    top:72%;	
-  }
 }
- 
-.new-travels{
-  padding:70px 0
-}
-
-.menu-titile h2{
-  font-size:30px;
-}
-

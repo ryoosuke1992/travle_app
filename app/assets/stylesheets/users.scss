@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.sign_up{
+.sign-up{
   background-image: url("/images/sign-up.jpg");
   height:100vh;
   max-width:100%;
@@ -12,13 +12,16 @@
   background-repeat: no-repeat;
   background-size: cover;
   color:white;
-}
 
-.field{
-  margin-top:30px;
-}
 
-.actions{
-  margin-top:50px;
-  color:white;
+  &__enlist{
+    &__field{
+    margin-top:30px;
+    }
+  }
+
+  &__actions{
+    margin-top:50px;
+    color:white;
+  }
 }
