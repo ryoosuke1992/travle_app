@@ -4,14 +4,12 @@
 
 
 .sign-up{
-  background-image: url("/images/sign-up.jpg");
   height:100vh;
   max-width:100%;
   background-position: left center;
   background-size:cover;
   background-repeat: no-repeat;
   background-size: cover;
-  color:white;
 
 
   &__enlist{
@@ -22,6 +20,34 @@
 
   &__actions{
     margin-top:50px;
+    color:white;
+  }
+}
+
+.sign-in{
+  height:100vh;
+  max-width:100%;
+  background-position: left center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top:40px;
+
+
+  &__enlist{
+    &__field{
+    margin-top:30px;
+    z-index:9999
+    }
+  }
+
+  &__check{
+    margin-top:15px;
+  }
+
+  &__actions{
+    margin-top:20px;
+    margin-bottom:20px;
     color:white;
   }
 }
