@@ -17,7 +17,7 @@ class PlansController < ApplicationController
     @plan.user_id = current_user.id 
     
     if @plan.save
-      redirect_to plans_path
+      redirect_to plans_path, notice: '旅行企画が投稿されました'
     else
       render 'new'
     end
