@@ -14,8 +14,7 @@ class PlansController < ApplicationController
 
   def create
     @plan = Plan.new(plan_params)
-    @plan.user_id = current_user.id 
-    
+
     if @plan.save
       redirect_to plans_path, notice: '旅行企画が投稿されました'
     else
@@ -26,11 +25,7 @@ class PlansController < ApplicationController
 
   private
   def plan_params
-    params.require(:plan).permit(:title, :date, :place, :meeting_place, :meeting_time, :content, :img)
-  end
-
-  def move_to_index
-    redirect_to :action => "index" unless user_signed_in?
+    params.require(:plan).permit(:title, :date, :place, :meeting_place, :meeting_time, :content, :img).merge(user_id: current_user.id)
   end
 
 end
