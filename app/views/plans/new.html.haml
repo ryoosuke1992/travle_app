@@ -1,0 +1,44 @@
+.new-travel
+  %h1.text-center新規旅行の企画
+  .container
+    .new-travel__enlist
+      = form_for(@plan) do |f|
+        - if @plan.errors.any?
+          - @plan.errors.full_messages.each do |message|
+            .red.text-center
+              = message
+        .new-travel__enlist__field
+          = f.label :企画名
+          = f.text_field :title
+          %br/
+        .new-travel__enlist__img
+          = f.label :アイキャッチ画像
+          = f.file_field :img, id: :book_img
+          %br/
+        .new-travel__enlist__field
+          = f.label :開催日	
+          %br/
+          = f.text_field :date
+          %br/
+        .new-travel__enlist__field
+          = f.label :旅行先
+          %br/
+          = f.text_field :place
+          %br/
+        .new-travel__enlist__field
+          = f.label :集合場所
+          %br/
+          = f.text_field :meeting_place
+          %br/
+        .new-travel__enlist__field
+          = f.label :集合時間
+          %br/
+          = f.text_field :meeting_time
+          %br/
+        .new-travel__enlist__field
+          = f.label :企画内容
+          %br/
+        .new-travel__enlist__text-area
+          = f.text_area  :content
+          %br/
+        = f.submit "企画する",class: 'sign-btn btn btn-info'

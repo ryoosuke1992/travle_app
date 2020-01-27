@@ -8,6 +8,7 @@ class CreatePlans < ActiveRecord::Migration[5.2]
       t.string :meeting_time
       t.text :content
       t.string :user_id
+      t.string :img
       t.timestamps
     end
   end
