@@ -7,7 +7,8 @@ class CreatePlans < ActiveRecord::Migration[5.2]
       t.string :meeting_place
       t.string :meeting_time
       t.text :content
-      t.string :user_id
+      t.string :image
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end

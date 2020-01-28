@@ -6,7 +6,7 @@
       .top__sign__button
         %button.btn.btn-primary.btn-lg.mr-3{type:"button"}
           %i.fa.fa-user-plus{"aria-hidden":"true"}>
-          旅行企画
+          = link_to "旅行企画", new_plan_path
         %button.btn.btn-danger.btn-lg{type:"button"}
           %i.fa.fa-sign-in{"aria-hidden":"true"}
           = link_to "ログアウト", destroy_user_session_path, method: :delete
