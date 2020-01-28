@@ -3,7 +3,9 @@ class PlansController < ApplicationController
   before_action :authenticate_user!, except: :index
 
   def show
-    @plan = Plan.find params[:id]
+    @user = User.find(1)
+    @plan = @user.plans
+    @plan = User.first.plans
   end
 
   def new
@@ -23,6 +25,6 @@ class PlansController < ApplicationController
   private
 
   def plan_params
-    params.require(:plan).permit(:title, :date, :place, :meeting_place, :meeting_time, :content, :img).merge(user_id: current_user.id)
+    params.require(:plan).permit(:title, :date, :place, :meeting_place, :meeting_time, :content, :image).merge(user_id: current_user.id)
   end
 end
