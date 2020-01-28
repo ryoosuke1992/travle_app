@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_01_17_131530) do
     t.string "meeting_time"
     t.text "content"
     t.string "user_id"
-    t.string "img"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

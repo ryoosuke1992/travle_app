@@ -59,14 +59,3 @@ ja:
       not_saved:
         one: "エラーが発生したため %{resource} は保存されませんでした:"
         other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした:"
-  activerecord:
-    models:
-      plan: 旅行
-    attributes:
-      plan:
-        title: 企画名
-        date: 開催日
-        place: 旅行先
-        meeting_place: 集合場所
-        meeting_time: 集合時間
-        content: 企画内容
