@@ -2,12 +2,6 @@ class PlansController < ApplicationController
 
   before_action :authenticate_user!, except: :index
 
-  def show
-    @user = User.find(1)
-    @plan = @user.plans
-    @plan = User.first.plans
-  end
-
   def new
     @plan = Plan.new
   end
