@@ -1,0 +1,5 @@
+- plans_random.each do |plan|
+  =image_tag plan.image.to_s
+  %h3
+    = link_to plan_path(plan) do
+      = plan.title
