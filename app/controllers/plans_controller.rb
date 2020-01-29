@@ -1,6 +1,11 @@
 class PlansController < ApplicationController
 
-  before_action :authenticate_user!, except: :index
+  before_action :authenticate_user!, except: [:index, :show]
+
+  def show
+    @plan = Plan.find params[:id]
+    @random = Plan.order("RAND()").limit(5)
+  end
 
   def new
     @plan = Plan.new
