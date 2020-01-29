@@ -25,13 +25,5 @@
         .text-center
           %button.btn.btn-danger.btn-lg.mt-5.text-center{type:"button"}
             = link_to "この企画に申し込む"
-      .travel-detail__contents__sub 
-        %h2
-          おすすめの旅行企画
-        %hr
-        - @random.each do |plan|
-          =image_tag plan.image.to_s
-          %h3
-            = link_to plan_path(plan) do
-              = plan.title
+      = render partial: 'sidebar', locals: { plan_random: @plan_random}
 

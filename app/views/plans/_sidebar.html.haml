@@ -1,0 +1,9 @@
+.travel-detail__contents__sub 
+  %h2
+    おすすめの旅行企画
+  %hr
+  - plan_random.each do |plan|
+    =image_tag plan.image.to_s
+    %h3
+      = link_to plan_path(plan) do
+        = plan.title

@@ -5,12 +5,12 @@
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .sign-in__enlist 
           .sign-in__enlist__field
-            = f.label :メールアドレス
-            %br/
+            .sign-in__enlist__field__label
+              = f.label :メールアドレス
             = f.email_field :email, autofocus: true, autocomplete: "email"
           .sign-in__enlist__field
-            = f.label :パスワード
-            %br/
+            .sign-in__enlist__field
+              = f.label :パスワード
             = f.password_field :password, autocomplete: "current-password"
           - if devise_mapping.rememberable?
             .sign-in__check
