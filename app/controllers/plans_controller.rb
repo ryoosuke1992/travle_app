@@ -4,7 +4,7 @@ class PlansController < ApplicationController
   before_action :set_plan, only: [:show]
 
   def show
-    @random_plans = Plan.order("RAND()").limit(5)
+    @plans = Plan.order("RAND()").limit(5)
   end
 
   def new
