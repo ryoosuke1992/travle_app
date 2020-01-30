@@ -3,25 +3,25 @@
     .travel-detail__contents
       .travel-detail__contents__main
         %h1 
-          =@plan.title
+          = @plan.title
         = image_tag @plan.image.to_s
         %table
           %tr
             %th 開催日
             %td
-              =@plan.date
+              = @plan.date
           %tr
             %th 集合場所
             %td 
-              =@plan.meeting_place
+              = @plan.meeting_place
           %tr
             %th 集合時間
             %td
-              =@plan.meeting_time
+              = @plan.meeting_time
           %tr
             %th 企画内容
             %td.text-left.p-3
-              =simple_format(@plan.content)
+              = simple_format(@plan.content)
         .text-center
           %button.btn.btn-danger.btn-lg.mt-5.text-center{type:"button"}
             = link_to "この企画に申し込む"
