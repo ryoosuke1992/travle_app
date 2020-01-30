@@ -96,18 +96,125 @@
 
     &__img {
       margin-top: 30px;
+      
       input {
-      border: none;
-      padding: 0;
+        border: none;
+        padding: 0;
       }
 
       label {
-      padding: 0;
+        padding: 0;
       }
     }
     
     &__text-area {
       margin-bottom: 30px;
+    }
+  }
+}
+
+.travel-detail {
+  padding-top:40px;
+  padding-bottom:40px;
+  h1 {
+    padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+    color: #494949;/*文字色*/
+    background: #f4f4f4;/*背景色*/
+    border-left: solid 5px #7db4e6;/*左線*/
+    border-bottom: solid 3px #d7d7d7;/*下線*/
+    font-size: 26px;   
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  hr {
+    width: 20%;
+    border: 1px solid #374CA5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    line-height: 25px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom:20px;
+    a{
+      color: #7B7B7B;
+    }
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  &__contents {
+    &__main {
+      a {
+        color:white;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+
+        tr {
+          border-bottom: solid 2px white;
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+
+        th {
+          position: relative;
+          text-align: left;
+          width: 30%;
+          background-color: #52c2d0;
+          color: white;
+          text-align: center;
+          padding: 10px 0;
+          
+          &:after{
+            display: block;
+            content: "";
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            top: calc(50% - 10px);
+            right: -10px;
+            border-left: 10px solid #52c2d0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+          }
+        }
+
+        td {
+          text-align: left;
+          width: 70%;
+          text-align: center;
+          background-color: #eee;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+@media ( min-width : 600px ) {
+  .travel-detail {
+    &__contents {
+      display:flex;
+      &__main {
+        width: 75%;
+        padding-right: 50px;
+      }
+      &__sub {
+        width: 20%;
+      }
     }
   }
 }
