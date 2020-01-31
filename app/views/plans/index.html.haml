@@ -19,3 +19,13 @@
         %button.btn.btn-danger.btn-lg{type:"button"}
           %i.fa.fa-sign-in{"aria-hidden":"true"}>
           = link_to "ログイン", new_user_session_path
+  .top__plans
+    %h2.text-center 新着旅行企画
+    %hr.mb-5
+    .row
+      - @recent_plans .each do |plan|
+        .col-md-3.mb-5
+          =image_tag plan.image.to_s
+          %h3.pl-1
+            = link_to plan_path(plan) do
+              = plan.title
