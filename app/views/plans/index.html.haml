@@ -25,7 +25,8 @@
     .row
       - @recent_plans.each do |plan|
         .col-md-3.mb-5
-          =image_tag plan.image.to_s
+          = image_tag plan.image.to_s
           %h3.pl-1
             = link_to plan_path(plan) do
               = plan.title
+    = paginate(@recent_plans)

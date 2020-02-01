@@ -4,7 +4,7 @@ class PlansController < ApplicationController
   before_action :set_plan, only: [:show]
 
   def index
-    @recent_plans = Plan.order("created_at DESC")
+    @recent_plans = Plan.page(params[:page]).per(12).order("created_at DESC")
   end
 
   def show
