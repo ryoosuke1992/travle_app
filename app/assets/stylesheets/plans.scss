@@ -7,16 +7,14 @@
 
 
 .top {
-  background-image: url("/images/top.png");
-  max-width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 680px;
-  position: relative;
-
-
   &__sign {
+    background-image: url("/images/top.png");
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 680px;
+    position: relative;
     &__button{
       position: absolute;
       left: 40%;
@@ -32,10 +30,9 @@
 
 @media (max-width: 770px){
 
-  .top {
-    height: 432px;
-    
+  .top { 
     &__sign {
+      height: 432px;
       &__button {
         left: 35%;
       }
@@ -166,7 +163,7 @@
           border-bottom: solid 2px white;
           &:last-child {
             border-bottom: none;
-          }
+         }
         }
 
         th {
@@ -216,5 +213,28 @@
         width: 20%;
       }
     }
+  }
+}
+
+
+.top__plans{
+  padding:70px 40px;
+  img{
+    width:100%;
+    height:200px;
+    margin-bottom:10px;
+  }
+
+  h3{
+    font-size:16px;
+  }
+
+  a{
+    color:black;
+  }
+  
+  hr{
+    width:10%;
+    border: 1px solid #374CA5;
   }
 }

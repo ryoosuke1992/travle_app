@@ -3,6 +3,10 @@ class PlansController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_plan, only: [:show]
 
+  def index
+    @recent_plans = Plan.order("created_at DESC")
+  end
+
   def show
     @random_plans = Plan.order("RAND()").limit(5)
   end
