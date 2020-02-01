@@ -23,7 +23,7 @@
     %h2.text-center 新着旅行企画
     %hr.mb-5
     .row
-      - @recent_plans .each do |plan|
+      - @recent_plans.each do |plan|
         .col-md-3.mb-5
           =image_tag plan.image.to_s
           %h3.pl-1
